@@ -1,0 +1,19 @@
+{
+  "name": "saucedemo-cypress",
+  "version": "1.0.0",
+  "description": "for cypress practice purpose",
+  "main": "index.js",
+  "scripts": {
+    "test": "cypress run",
+    "chrome": "cypress run --browser chrome",
+    "firefox": "cypress run --browser firefox"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^13.14.0",
+    "eslint": "^9.9.1",
+    "eslint-plugin-cypress": "^3.5.0",
+    "mochawesome": "^7.1.3"
+  }
+}

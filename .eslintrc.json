@@ -1,0 +1,20 @@
+{
+  "env": {
+    "cypress/globals": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:cypress/recommended",
+    "plugin:prettier/recommended"
+  ],
+  "parserOptions": {
+    "ecmaVersion": 12,
+    "sourceType": "module"
+  },
+  "plugins": ["cypress"],
+  "rules": {
+    "no-unused-vars": "warn",
+    "semi": ["error", "always"],
+    "quotes": ["error", "single"]
+  }
+}
