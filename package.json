@@ -6,7 +6,9 @@
   "scripts": {
     "test": "cypress run",
     "chrome": "cypress run --browser chrome",
-    "firefox": "cypress run --browser firefox"
+    "firefox": "cypress run --browser firefox",
+    "merge-reports": "mochawesome-merge ./mochawsome-reporter/*.json > ./report1.json",
+    "generate-htmlreport": "marge ./report1.json --reportDir ./mochawesome-report"
   },
   "author": "",
   "license": "ISC",
@@ -15,6 +17,9 @@
     "cypress-mochawesome-reporter": "^3.8.2",
     "eslint": "^9.9.1",
     "eslint-plugin-cypress": "^3.5.0",
-    "mochawesome": "^7.1.3"
-  }
+    "mochawesome": "^7.1.3",
+    "mochawesome-merge": "^4.3.0",
+    "mochawesome-report-generator": "^6.2.0"
+  },
+  "dependencies": {}
 }

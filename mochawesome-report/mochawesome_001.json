@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2024-09-06T10:09:38.648Z",
-    "end": "2024-09-06T10:09:41.068Z",
-    "duration": 2420,
+    "start": "2024-09-06T16:34:32.335Z",
+    "end": "2024-09-06T16:34:34.263Z",
+    "duration": 1928,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,49 +18,49 @@
   },
   "results": [
     {
-      "uuid": "0f067018-ee53-47aa-a857-dc856c05d0c5",
+      "uuid": "93a9c164-1d00-4bff-b5bb-17a3353a84e7",
       "title": "",
-      "fullFile": "cypress\\e2e\\Sidebar.cy.js",
-      "file": "cypress\\e2e\\Sidebar.cy.js",
+      "fullFile": "cypress\\e2e\\CheckoutPage.cy.js",
+      "file": "cypress\\e2e\\CheckoutPage.cy.js",
       "beforeHooks": [],
       "afterHooks": [],
       "tests": [],
       "suites": [
         {
-          "uuid": "5864fbf5-ae5e-420e-b04e-bd2d914526fd",
-          "title": "Sidebar Functionality",
+          "uuid": "21de4b04-c5c9-4af9-b788-885799512965",
+          "title": "Checkout page1",
           "fullFile": "",
           "file": "",
           "beforeHooks": [],
           "afterHooks": [],
           "tests": [
             {
-              "title": "Validate logout redirects user to landing page",
-              "fullTitle": "Sidebar Functionality Validate logout redirects user to landing page",
+              "title": "Finish button should redirect to Checkout Complete page",
+              "fullTitle": "Checkout page1 Finish button should redirect to Checkout Complete page",
               "timedOut": null,
-              "duration": 2399,
+              "duration": 1887,
               "state": "passed",
               "speed": "fast",
               "pass": true,
               "fail": false,
               "pending": false,
               "context": null,
-              "code": "cy.get('#logout_sidebar_link').should('have.text', 'Logout').click().url().should('eq', 'https://www.saucedemo.com/v1/index.html');",
+              "code": "cy.visit('checkout-step-two.html').get('.subheader').should('have.text', 'Checkout: Overview');\ncy.get('.btn_action.cart_button').should('have.text', 'FINISH').and('have.css', 'background-color', 'rgb(226, 35, 26)').and('have.css', 'color', 'rgb(255, 255, 255)').click().url().should('be.eq', 'https://www.saucedemo.com/v1/checkout-complete.html');\ncy.get('.subheader').should('have.text', 'Finish');\ncy.get('h2').should('exist').and('have.text', 'THANK YOU FOR YOUR ORDER');",
               "err": {},
-              "uuid": "14b7b9b6-3885-461e-9ca4-3d6e86f92af5",
-              "parentUUID": "5864fbf5-ae5e-420e-b04e-bd2d914526fd",
+              "uuid": "9e71188a-f340-4853-9e80-13f878f2509a",
+              "parentUUID": "21de4b04-c5c9-4af9-b788-885799512965",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "14b7b9b6-3885-461e-9ca4-3d6e86f92af5"
+            "9e71188a-f340-4853-9e80-13f878f2509a"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 2399,
+          "duration": 1887,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -94,10 +94,11 @@
     },
     "marge": {
       "options": {
+        "charts": true,
         "overwrite": false,
         "html": false,
         "json": true,
-        "reportDir": "cypress\\reports\\html\\.jsons"
+        "reporterDir": "cypress/reports/"
       },
       "version": "6.2.0"
     }

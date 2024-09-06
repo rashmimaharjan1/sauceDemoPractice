@@ -1,14 +1,14 @@
 {
   "stats": {
     "suites": 1,
-    "tests": 1,
-    "passes": 1,
+    "tests": 3,
+    "passes": 3,
     "pending": 0,
     "failures": 0,
-    "start": "2024-09-06T10:02:35.509Z",
-    "end": "2024-09-06T10:02:36.801Z",
-    "duration": 1292,
-    "testsRegistered": 1,
+    "start": "2024-09-06T16:34:27.053Z",
+    "end": "2024-09-06T16:34:30.875Z",
+    "duration": 3822,
+    "testsRegistered": 3,
     "passPercent": 100,
     "pendingPercent": 0,
     "other": 0,
@@ -18,49 +18,87 @@
   },
   "results": [
     {
-      "uuid": "f3f75b90-89ba-4e7d-b8ad-d1e1cd2d4145",
+      "uuid": "c946749b-ff0a-4e00-bea6-5ae7dcfdcd3e",
       "title": "",
-      "fullFile": "cypress\\e2e\\VerifyLogin.spec.cy.js",
-      "file": "cypress\\e2e\\VerifyLogin.spec.cy.js",
+      "fullFile": "cypress\\e2e\\CartPage.cy.js",
+      "file": "cypress\\e2e\\CartPage.cy.js",
       "beforeHooks": [],
       "afterHooks": [],
       "tests": [],
       "suites": [
         {
-          "uuid": "bbfc5e90-c58d-42a4-ae91-200b51b29937",
-          "title": "Login page",
+          "uuid": "b1aa5989-7930-4f36-bcc4-87c74255e51c",
+          "title": "Cart Page",
           "fullFile": "",
           "file": "",
           "beforeHooks": [],
           "afterHooks": [],
           "tests": [
             {
-              "title": "should login with valid username and password",
-              "fullTitle": "Login page should login with valid username and password",
+              "title": "should have page title Your Cart",
+              "fullTitle": "Cart Page should have page title Your Cart",
               "timedOut": null,
-              "duration": 1246,
+              "duration": 1111,
               "state": "passed",
               "speed": "fast",
               "pass": true,
               "fail": false,
               "pending": false,
               "context": null,
-              "code": "//load fixture data\ncy.fixture('loginData').as('loginData');\n//using fixture data below\ncy.get('@loginData').then(user => {\n  cy.get('[data-test=\"username\"]').type(user.user1.username);\n  // cy.wait(1000)\n  cy.get('[data-test=\"password\"]').type(user.user1.password);\n});\n// cy.wait(1000)\n//login button should be red and text should be white\ncy.get('input#login-button').should('have.css', 'background-color', 'rgb(226, 35, 26)').and('have.css', 'color', 'rgb(255, 255, 255)').click();\ncy.url().should('eq', 'https://www.saucedemo.com/v1/inventory.html');",
+              "code": "cy.get('.subheader').should('have.text', 'Your Cart').and('have.css', 'background-color', 'rgb(71, 76, 85)');",
               "err": {},
-              "uuid": "946f590e-1316-40be-ad86-7533ce75aa2e",
-              "parentUUID": "bbfc5e90-c58d-42a4-ae91-200b51b29937",
+              "uuid": "18b2314d-f3af-4c3c-8907-4797321e3ab5",
+              "parentUUID": "b1aa5989-7930-4f36-bcc4-87c74255e51c",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Continue shoping should be clickable and redirects to inventory page",
+              "fullTitle": "Cart Page Continue shoping should be clickable and redirects to inventory page",
+              "timedOut": null,
+              "duration": 2239,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('a.btn_secondary').should('have.text', 'Continue Shopping').click().url('eq', '/inventory.html');",
+              "err": {},
+              "uuid": "7fdd8bcf-2b0c-4f96-ba89-91afa8532c5e",
+              "parentUUID": "b1aa5989-7930-4f36-bcc4-87c74255e51c",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Checkout button should be clickable and redirect to the checkout page",
+              "fullTitle": "Cart Page Checkout button should be clickable and redirect to the checkout page",
+              "timedOut": null,
+              "duration": 406,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('.btn_action').should('have.text', 'CHECKOUT').and('have.css', 'background-color', 'rgb(226, 35, 26)').and('have.css', 'color', 'rgb(255, 255, 255)').click().url().should('contain', '/checkout-step-one.html');",
+              "err": {},
+              "uuid": "599cdd32-6936-4f21-8853-d15c4dda5d1e",
+              "parentUUID": "b1aa5989-7930-4f36-bcc4-87c74255e51c",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "946f590e-1316-40be-ad86-7533ce75aa2e"
+            "18b2314d-f3af-4c3c-8907-4797321e3ab5",
+            "7fdd8bcf-2b0c-4f96-ba89-91afa8532c5e",
+            "599cdd32-6936-4f21-8853-d15c4dda5d1e"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 1246,
+          "duration": 3756,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -84,7 +122,7 @@
       "options": {
         "quiet": false,
         "reportFilename": "mochawesome",
-        "saveHtml": true,
+        "saveHtml": false,
         "saveJson": true,
         "consoleReporter": "spec",
         "useInlineDiffs": false,
@@ -93,7 +131,13 @@
       "version": "7.1.3"
     },
     "marge": {
-      "options": null,
+      "options": {
+        "charts": true,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reporterDir": "cypress/reports/"
+      },
       "version": "6.2.0"
     }
   }

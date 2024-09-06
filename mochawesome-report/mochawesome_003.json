@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2024-09-06T10:11:14.376Z",
-    "end": "2024-09-06T10:11:16.809Z",
-    "duration": 2433,
+    "start": "2024-09-06T16:34:40.240Z",
+    "end": "2024-09-06T16:34:42.483Z",
+    "duration": 2243,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "c5e5a13b-d34e-4d40-8cbe-a2a2f01ab829",
+      "uuid": "eaba8403-e69c-45c6-ba1d-708a46ec5c57",
       "title": "",
       "fullFile": "cypress\\e2e\\Sidebar.cy.js",
       "file": "cypress\\e2e\\Sidebar.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "bcdd219c-995d-4f16-a030-69af210356fa",
+          "uuid": "61bec9a7-826c-400b-b830-cc39ab459bd5",
           "title": "Sidebar Functionality",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Validate logout redirects user to landing page",
               "fullTitle": "Sidebar Functionality Validate logout redirects user to landing page",
               "timedOut": null,
-              "duration": 2408,
+              "duration": 2223,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -47,20 +47,20 @@
               "context": null,
               "code": "cy.get('#logout_sidebar_link').should('have.text', 'Logout').click().url().should('eq', 'https://www.saucedemo.com/v1/index.html');",
               "err": {},
-              "uuid": "fe6fdbad-ee1b-48d3-937a-d2ee2fd974b2",
-              "parentUUID": "bcdd219c-995d-4f16-a030-69af210356fa",
+              "uuid": "120de4b5-9b73-4e80-8e80-ca9f0cf2b48c",
+              "parentUUID": "61bec9a7-826c-400b-b830-cc39ab459bd5",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "fe6fdbad-ee1b-48d3-937a-d2ee2fd974b2"
+            "120de4b5-9b73-4e80-8e80-ca9f0cf2b48c"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 2408,
+          "duration": 2223,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -94,10 +94,11 @@
     },
     "marge": {
       "options": {
+        "charts": true,
         "overwrite": false,
         "html": false,
         "json": true,
-        "reportDir": "cypress\\reports\\html\\.jsons"
+        "reporterDir": "cypress/reports/"
       },
       "version": "6.2.0"
     }
