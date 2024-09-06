@@ -1,0 +1,219 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 7,
+    "passes": 7,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-09-06T10:11:10.969Z",
+    "end": "2024-09-06T10:11:12.943Z",
+    "duration": 1974,
+    "testsRegistered": 7,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "9982d7f6-e325-447a-a107-c3ec9e59b409",
+      "title": "",
+      "fullFile": "cypress\\e2e\\InventoryPage.cy.js",
+      "file": "cypress\\e2e\\InventoryPage.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "e53550d9-94b8-4f60-a05b-a241fffbaf0a",
+          "title": "Inventory page",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Page title should be Products",
+              "fullTitle": "Inventory page Page title should be Products",
+              "timedOut": null,
+              "duration": 420,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('.product_label').should('have.text', 'Products');",
+              "err": {},
+              "uuid": "a7bef787-b3ab-4f73-874c-6985828b4fd6",
+              "parentUUID": "e53550d9-94b8-4f60-a05b-a241fffbaf0a",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Sorting should have Name A to Z selected by default",
+              "fullTitle": "Inventory page Sorting should have Name A to Z selected by default",
+              "timedOut": null,
+              "duration": 302,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('.product_sort_container').should('have.value', 'az'); //sorting value by default\ncy.get('.product_sort_container') //should have dropdown options \n.should('be.visible').within(() => {\n  cy.contains('Name (A to Z)').should('exist');\n  cy.contains('Name (Z to A)').should('exist');\n  cy.contains('Price (low to high)').should('exist');\n  cy.contains('Price (high to low)').should('exist');\n});\ncy.get('.product_sort_container').select('Price (low to high)').should('have.value', 'lohi'); //select one of the option from the dropdown",
+              "err": {},
+              "uuid": "43bdde3b-c1e8-43aa-ba33-5afcfe8c7873",
+              "parentUUID": "e53550d9-94b8-4f60-a05b-a241fffbaf0a",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Inventory list card should have image, item title, description, price and Add to cart button",
+              "fullTitle": "Inventory page Inventory list card should have image, item title, description, price and Add to cart button",
+              "timedOut": null,
+              "duration": 152,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('.inventory_list').each(card => {\n  cy.wrap(card).find('.inventory_item_img').should('exist');\n  cy.wrap(card).find('.inventory_item_label > a').should('exist');\n  cy.wrap(card).find('.inventory_item_label > .inventory_item_desc').should('exist');\n  cy.wrap(card).find('.pricebar > .inventory_item_price').should('exist');\n  cy.wrap(card).find('.pricebar > .btn_inventory').should('exist');\n});",
+              "err": {},
+              "uuid": "d142fc99-1084-4635-bcb8-b1f854b24100",
+              "parentUUID": "e53550d9-94b8-4f60-a05b-a241fffbaf0a",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Add to cart should be clickable and should change to Remove button",
+              "fullTitle": "Inventory page Add to cart should be clickable and should change to Remove button",
+              "timedOut": null,
+              "duration": 214,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(':nth-child(1)  > .pricebar > .btn_primary').should('have.text', 'ADD TO CART').click().should('be.visible', '.btn_secondary .btn_inventory\"').and('have.text', 'REMOVE').and('have.css', 'background-color', 'rgb(255, 255, 255)').and('have.css', 'border', '2px solid rgb(71, 76, 85)').and('have.css', 'color', 'rgb(71, 76, 85)');\ncy.get('.shopping_cart_container').find('a  > .shopping_cart_badge').should('be.visible').and('have.css', 'background-color', 'rgb(255, 37, 58)').and('have.css', 'color', 'rgb(255, 255, 255)');",
+              "err": {},
+              "uuid": "a7f9e1f4-27ac-4a67-8728-1a829f74505f",
+              "parentUUID": "e53550d9-94b8-4f60-a05b-a241fffbaf0a",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Item title should be red and clickable",
+              "fullTitle": "Inventory page Item title should be red and clickable",
+              "timedOut": null,
+              "duration": 211,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('#item_4_title_link > .inventory_item_name').should('have.css', 'color', 'rgb(226, 35, 26)').click();",
+              "err": {},
+              "uuid": "85622cda-07f7-4670-b906-8c1b5fb26388",
+              "parentUUID": "e53550d9-94b8-4f60-a05b-a241fffbaf0a",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Price figure should be red",
+              "fullTitle": "Inventory page Price figure should be red",
+              "timedOut": null,
+              "duration": 107,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(':nth-child(1) > .pricebar > .btn_primary').should('have.css', 'color', 'rgb(226, 35, 26)').should('have.css', 'border', '2px solid rgb(226, 35, 26)').should('have.css', 'background-color', 'rgb(255, 255, 255)');",
+              "err": {},
+              "uuid": "ebb0f827-d011-4814-b044-37176bf9ecee",
+              "parentUUID": "e53550d9-94b8-4f60-a05b-a241fffbaf0a",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Cart icon should be clickable",
+              "fullTitle": "Inventory page Cart icon should be clickable",
+              "timedOut": null,
+              "duration": 430,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('#shopping_cart_container > a').click().url().should('eq', 'https://www.saucedemo.com/v1/cart.html');",
+              "err": {},
+              "uuid": "f00c4e61-5069-4965-8cff-b652f9db0903",
+              "parentUUID": "e53550d9-94b8-4f60-a05b-a241fffbaf0a",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "a7bef787-b3ab-4f73-874c-6985828b4fd6",
+            "43bdde3b-c1e8-43aa-ba33-5afcfe8c7873",
+            "d142fc99-1084-4635-bcb8-b1f854b24100",
+            "a7f9e1f4-27ac-4a67-8728-1a829f74505f",
+            "85622cda-07f7-4670-b906-8c1b5fb26388",
+            "ebb0f827-d011-4814-b044-37176bf9ecee",
+            "f00c4e61-5069-4965-8cff-b652f9db0903"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1836,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}
