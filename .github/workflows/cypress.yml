@@ -39,8 +39,9 @@ jobs:
       - name: Generate Mochawesome report
         run: |
           npm install mochawesome-merge mochawesome-report-generator
+          rm -r .\mochawesome-report\*.json
           npx mochawesome-merge mochawesome-report/*.json > mochawesome-report/report.json
-          npx marge mochawesome-report/report.json --reportDir mochawesome-report/
+          npx marge mochawesome-report/report.json --reportDir mochawesome-report
         
 
       # Upload Mochawesome report as artifact
