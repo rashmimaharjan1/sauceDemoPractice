@@ -40,8 +40,8 @@ jobs:
         run: |
           npm install mochawesome-merge mochawesome-report-generator
           rm -r .\mochawesome-report\*.json
-          npx mochawesome-merge mochawesome-report/*.json > mochawesome-report/report.json
-          npx marge mochawesome-report/report.json --reportDir mochawesome-report
+          npx mochawesome-merge cypress/mochawesome-report/*.json > cypress/mochawesome-report/report.json
+          npx marge cypress/mochawesome-report/report.json --reportDir cypress/mochawesome-report
         
 
       # Upload Mochawesome report as artifact

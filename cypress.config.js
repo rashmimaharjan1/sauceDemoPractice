@@ -6,12 +6,12 @@ module.exports = defineConfig({
     baseUrl: 'https://www.saucedemo.com/v1/',
 
     reporter: 'mochawesome',
-    reporterOptions: {
+    "reporterOptions": {
       "charts":true,
       "overwrite": false,
      "html":false,
       "json": true,
-      "reporterDir": "cypress/reports/"
+      "reportDir": "cypress/mochawesome-report"
 
     },
 

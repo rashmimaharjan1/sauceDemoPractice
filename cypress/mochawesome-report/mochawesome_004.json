@@ -1,0 +1,106 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-09-10T06:06:48.548Z",
+    "end": "2024-09-10T06:06:50.302Z",
+    "duration": 1754,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "14657b1d-57a0-456f-b0cb-83f51a5dd077",
+      "title": "",
+      "fullFile": "cypress\\e2e\\Sidebar.cy.js",
+      "file": "cypress\\e2e\\Sidebar.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "0f4c0f2d-cc36-4792-b0eb-9e87be3aee41",
+          "title": "Sidebar Functionality",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Validate logout redirects user to landing page",
+              "fullTitle": "Sidebar Functionality Validate logout redirects user to landing page",
+              "timedOut": null,
+              "duration": 1731,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('#logout_sidebar_link').should('have.text', 'Logout').click().url().should('eq', 'https://www.saucedemo.com/v1/index.html');",
+              "err": {},
+              "uuid": "30c34c1f-773b-40d8-b09a-e97ac1d344fc",
+              "parentUUID": "0f4c0f2d-cc36-4792-b0eb-9e87be3aee41",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "30c34c1f-773b-40d8-b09a-e97ac1d344fc"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1731,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/mochawesome-report"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

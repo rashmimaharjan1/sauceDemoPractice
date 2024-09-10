@@ -5,9 +5,9 @@
     "passes": 3,
     "pending": 0,
     "failures": 0,
-    "start": "2024-09-09T11:28:54.487Z",
-    "end": "2024-09-09T11:28:56.815Z",
-    "duration": 2328,
+    "start": "2024-09-10T06:06:29.482Z",
+    "end": "2024-09-10T06:06:30.909Z",
+    "duration": 1427,
     "testsRegistered": 3,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "e0410772-72ad-41cd-8e1f-8d22466364ca",
+      "uuid": "146037ae-9781-46b9-ae17-670295a42e0b",
       "title": "",
       "fullFile": "cypress\\e2e\\CartPage.cy.js",
       "file": "cypress\\e2e\\CartPage.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "a5c76d2a-ab8b-4a47-a307-a5c25f300d98",
+          "uuid": "1ab3fcec-02e9-45a6-86b7-7acb46f6b1ac",
           "title": "Cart Page",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "should have page title Your Cart",
               "fullTitle": "Cart Page should have page title Your Cart",
               "timedOut": null,
-              "duration": 1211,
+              "duration": 591,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -47,8 +47,8 @@
               "context": null,
               "code": "cy.get('.subheader').should('have.text', 'Your Cart').and('have.css', 'background-color', 'rgb(71, 76, 85)');",
               "err": {},
-              "uuid": "9288735d-8cc7-4917-95a7-aa35e582b7ca",
-              "parentUUID": "a5c76d2a-ab8b-4a47-a307-a5c25f300d98",
+              "uuid": "0cd8245a-53ec-4f34-b0f6-1f273ce982fd",
+              "parentUUID": "1ab3fcec-02e9-45a6-86b7-7acb46f6b1ac",
               "isHook": false,
               "skipped": false
             },
@@ -56,7 +56,7 @@
               "title": "Continue shoping should be clickable and redirects to inventory page",
               "fullTitle": "Cart Page Continue shoping should be clickable and redirects to inventory page",
               "timedOut": null,
-              "duration": 580,
+              "duration": 562,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -65,8 +65,8 @@
               "context": null,
               "code": "cy.get('a.btn_secondary').should('have.text', 'Continue Shopping').click().url('eq', '/inventory.html');",
               "err": {},
-              "uuid": "616e7b04-a2af-4d07-a148-3d118dbfb94d",
-              "parentUUID": "a5c76d2a-ab8b-4a47-a307-a5c25f300d98",
+              "uuid": "911e0eb7-4bac-4f47-9f49-5bfcedc421fc",
+              "parentUUID": "1ab3fcec-02e9-45a6-86b7-7acb46f6b1ac",
               "isHook": false,
               "skipped": false
             },
@@ -74,7 +74,7 @@
               "title": "Checkout button should be clickable and redirect to the checkout page",
               "fullTitle": "Cart Page Checkout button should be clickable and redirect to the checkout page",
               "timedOut": null,
-              "duration": 463,
+              "duration": 230,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -83,22 +83,22 @@
               "context": null,
               "code": "cy.get('.btn_action').should('have.text', 'CHECKOUT').and('have.css', 'background-color', 'rgb(226, 35, 26)').and('have.css', 'color', 'rgb(255, 255, 255)').click().url().should('contain', '/checkout-step-one.html');",
               "err": {},
-              "uuid": "68639f2a-2cef-4e53-88ee-a402d2f754b8",
-              "parentUUID": "a5c76d2a-ab8b-4a47-a307-a5c25f300d98",
+              "uuid": "f3928c16-464c-4e44-a9bf-35e4d6846117",
+              "parentUUID": "1ab3fcec-02e9-45a6-86b7-7acb46f6b1ac",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "9288735d-8cc7-4917-95a7-aa35e582b7ca",
-            "616e7b04-a2af-4d07-a148-3d118dbfb94d",
-            "68639f2a-2cef-4e53-88ee-a402d2f754b8"
+            "0cd8245a-53ec-4f34-b0f6-1f273ce982fd",
+            "911e0eb7-4bac-4f47-9f49-5bfcedc421fc",
+            "f3928c16-464c-4e44-a9bf-35e4d6846117"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 2254,
+          "duration": 1383,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -136,7 +136,7 @@
         "overwrite": false,
         "html": false,
         "json": true,
-        "reporterDir": "cypress/reports/"
+        "reportDir": "cypress/mochawesome-report"
       },
       "version": "6.2.0"
     }
