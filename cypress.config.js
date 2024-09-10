@@ -1,6 +1,7 @@
 const { defineConfig } = require("cypress");
 
 module.exports = defineConfig({
+  projectId: "5dq4t8",
   e2e: {
     baseUrl: 'https://www.saucedemo.com/v1/',
 

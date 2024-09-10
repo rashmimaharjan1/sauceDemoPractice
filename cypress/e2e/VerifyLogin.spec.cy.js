@@ -40,8 +40,8 @@ describe('Login page', () => {
     });
     cy.wait(1000)
     cy.get('#login-button').click()
-    cy.get('[data-test="error"]').should('be.visible').and('have.text','Epic sadface: Sorry, this user has been locked out.') //error message should show
-    cy.get('.error-button').click()
+    cy.get('[data-test="error"]').should('be.visible').and('have.text','Epic sadface: Sorry, this user has been locked out.')
+    
   });
   //====================================================================
 //for user 3
