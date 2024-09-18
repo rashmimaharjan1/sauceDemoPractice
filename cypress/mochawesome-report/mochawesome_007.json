@@ -1,0 +1,163 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 4,
+    "passes": 4,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-09-18T05:33:06.631Z",
+    "end": "2024-09-18T05:33:17.684Z",
+    "duration": 11053,
+    "testsRegistered": 4,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "8f6faba5-879d-4c3e-9d41-785f4341b493",
+      "title": "",
+      "fullFile": "cypress\\e2e\\ParameterizedLogin.cy.js",
+      "file": "cypress\\e2e\\ParameterizedLogin.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "2b7e2aaf-8870-479e-9683-15490bcc1c14",
+          "title": "Parameterized login test",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should succeed with user1",
+              "fullTitle": "Parameterized login test should succeed with user1",
+              "timedOut": null,
+              "duration": 3029,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Use the userData variable directly since it's defined in the outer scope\nconst {\n  username,\n  password\n} = userData[user]; // Access user data correctly\ncy.get('[data-test=\"username\"]').type(username);\ncy.get('[data-test=\"password\"]').type(password);\ncy.get('input#login-button').click();\n// Add assertions based on shouldSucceed\nif (shouldSucceed) {\n  cy.url().should('include', expectedUrl);\n} else {\n  cy.url().should('include', '/'); // Adjust based on your application\n  cy.get('[data-test=\"error\"]').should('be.visible').and('have.text', 'Epic sadface: Sorry, this user has been locked out.'); // Adjust selector based on your app\n}",
+              "err": {},
+              "uuid": "5ce7a493-b4fd-403d-8459-fcf3ef1ddfc8",
+              "parentUUID": "2b7e2aaf-8870-479e-9683-15490bcc1c14",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should fail with user2",
+              "fullTitle": "Parameterized login test should fail with user2",
+              "timedOut": null,
+              "duration": 857,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Use the userData variable directly since it's defined in the outer scope\nconst {\n  username,\n  password\n} = userData[user]; // Access user data correctly\ncy.get('[data-test=\"username\"]').type(username);\ncy.get('[data-test=\"password\"]').type(password);\ncy.get('input#login-button').click();\n// Add assertions based on shouldSucceed\nif (shouldSucceed) {\n  cy.url().should('include', expectedUrl);\n} else {\n  cy.url().should('include', '/'); // Adjust based on your application\n  cy.get('[data-test=\"error\"]').should('be.visible').and('have.text', 'Epic sadface: Sorry, this user has been locked out.'); // Adjust selector based on your app\n}",
+              "err": {},
+              "uuid": "764ad13f-a80c-4112-a15d-72f79db21d9a",
+              "parentUUID": "2b7e2aaf-8870-479e-9683-15490bcc1c14",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should succeed with user3",
+              "fullTitle": "Parameterized login test should succeed with user3",
+              "timedOut": null,
+              "duration": 974,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Use the userData variable directly since it's defined in the outer scope\nconst {\n  username,\n  password\n} = userData[user]; // Access user data correctly\ncy.get('[data-test=\"username\"]').type(username);\ncy.get('[data-test=\"password\"]').type(password);\ncy.get('input#login-button').click();\n// Add assertions based on shouldSucceed\nif (shouldSucceed) {\n  cy.url().should('include', expectedUrl);\n} else {\n  cy.url().should('include', '/'); // Adjust based on your application\n  cy.get('[data-test=\"error\"]').should('be.visible').and('have.text', 'Epic sadface: Sorry, this user has been locked out.'); // Adjust selector based on your app\n}",
+              "err": {},
+              "uuid": "37bb0a7f-98c7-4834-9613-a34f3babb3e3",
+              "parentUUID": "2b7e2aaf-8870-479e-9683-15490bcc1c14",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should succeed with user4",
+              "fullTitle": "Parameterized login test should succeed with user4",
+              "timedOut": null,
+              "duration": 5974,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Use the userData variable directly since it's defined in the outer scope\nconst {\n  username,\n  password\n} = userData[user]; // Access user data correctly\ncy.get('[data-test=\"username\"]').type(username);\ncy.get('[data-test=\"password\"]').type(password);\ncy.get('input#login-button').click();\n// Add assertions based on shouldSucceed\nif (shouldSucceed) {\n  cy.url().should('include', expectedUrl);\n} else {\n  cy.url().should('include', '/'); // Adjust based on your application\n  cy.get('[data-test=\"error\"]').should('be.visible').and('have.text', 'Epic sadface: Sorry, this user has been locked out.'); // Adjust selector based on your app\n}",
+              "err": {},
+              "uuid": "d7ab1447-eb74-4760-9487-e502fa74e9b9",
+              "parentUUID": "2b7e2aaf-8870-479e-9683-15490bcc1c14",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "5ce7a493-b4fd-403d-8459-fcf3ef1ddfc8",
+            "764ad13f-a80c-4112-a15d-72f79db21d9a",
+            "37bb0a7f-98c7-4834-9613-a34f3babb3e3",
+            "d7ab1447-eb74-4760-9487-e502fa74e9b9"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 10834,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/mochawesome-report"
+      },
+      "version": "6.2.0"
+    }
+  }
+}
