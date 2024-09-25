@@ -31,11 +31,8 @@ jobs:
       - name: Install Cypress binary
         run: npx cypress install
 
-      # Run Cypress tests
-      - name: Run Cypress test
-
       # Run Cypress tests and Generate Mochawesome report
-      - name: Generate Mochawesome report
+      - name: Run cypress and Generate Mochawesome report
         run: |
           npm install mochawesome-merge mochawesome-report-generator
           npx cypress run --reporter mochawesome
