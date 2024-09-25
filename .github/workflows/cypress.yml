@@ -32,14 +32,13 @@ jobs:
         run: npx cypress install
 
       # Run Cypress tests
-      - name: Run Cypress tests
-        run: npx cypress run
+      - name: Run Cypress test
 
-      # Generate Mochawesome report
+      # Run Cypress tests and Generate Mochawesome report
       - name: Generate Mochawesome report
         run: |
           npm install mochawesome-merge mochawesome-report-generator
-          
+          npx cypress run --reporter mochawesome
           npx mochawesome-merge cypress/mochawesome-report/*.json > cypress/mochawesome-report/report.json
           npx marge cypress/mochawesome-report/report.json --reportDir cypress/mochawesome-report
         
