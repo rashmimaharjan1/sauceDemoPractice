@@ -1,0 +1,12 @@
+node_modules
+ cypress/PageActions/
+        cypress/PageObjects/LoginPage.js
+        cypress/PageObjects/header.js
+        cypress/downloads/
+        cypress/mochawesome-report/mochawesome_008.json
+        cypress/mochawesome-report/mochawesome_008.json
+        cypress/mochawesome-report/mochawesome_008.json
+        cypress/mochawesome-report/mochawesome_008.json
+        cypress/mochawesome-report/mochawesome_008.json
+        cypress/mochawesome-report/mochawesome_008.json
+        cypress/mochawesome-report/mochawesome_008.json

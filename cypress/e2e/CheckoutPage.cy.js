@@ -1,3 +1,4 @@
+/// <reference types="cypress" />
 describe('Checkout page1', () => {
 
   //visit first checkout page
@@ -6,7 +7,7 @@ describe('Checkout page1', () => {
    cy.fixture('UserData').as('userData')
   })
   
-  it('Page title should have text Checkout: Your Information',()=>{
+it('Page title should have text Checkout: Your Information',()=>{
     cy.get('.subheader').should('have.text','Checkout: Your Information')
   })  
   it('Page should have form first name , last name and zip/postal code',()=>{

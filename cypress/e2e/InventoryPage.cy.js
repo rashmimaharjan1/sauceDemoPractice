@@ -1,7 +1,14 @@
+import header from "../PageObjects/header"
+
 describe('Inventory page',()=>{
     
     beforeEach(function (){
    cy.visit('inventory.html')
+  })
+//used pageobject model
+  it('header have logo and cart', ()=>{
+    header.isLogoPresent();
+    header.clickCart();
   })
   it('Page title should be Products',()=>{
     cy.get('.product_label').should('have.text','Products')
